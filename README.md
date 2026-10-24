@@ -34,3 +34,4 @@ For the best development experience, open the folder in VS Code and use a local 
 5. After GitHub publishes the site, use the URL shown in the Pages settings.
 "# Personal-Portifolio-" 
 "# Personal-Portifolio-" 
+"# Personal-Portifolio" 
