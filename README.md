@@ -1,6 +1,6 @@
 # Lokesh Beri — Personal Portfolio
 
-This project is a personal portfolio website, It gives visitors a single place to learn about Lokesh, understand his education and experience, see the technologies and strengths he is developing, explore a featured project, and find ways to get in touch.
+This project is my personal portfolio website, It gives visitors a single place to learn about Lokesh, understand his education and experience, see the technologies and strengths he is developing, explore a featured project, and find ways to get in touch.
 
 The site is designed as a clear, responsive introduction for recruiters, collaborators, and anyone interested in his work. It is built with plain HTML, CSS, and JavaScript, so it can be opened and hosted as a static website without a framework or build process.
 
