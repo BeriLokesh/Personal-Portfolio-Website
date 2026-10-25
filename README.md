@@ -1,26 +1,41 @@
 # Lokesh Beri — Personal Portfolio
 
-A responsive, single-page portfolio for Lokesh Beri, a Computer Science and Engineering student and aspiring web developer. The site introduces its owner, presents skills, experience, and projects, and provides contact details.
+This project is a personal portfolio website, It gives visitors a single place to learn about Lokesh, understand his education and experience, see the technologies and strengths he is developing, explore a featured project, and find ways to get in touch.
 
-Built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or package installation required.
+The site is designed as a clear, responsive introduction for recruiters, collaborators, and anyone interested in his work. It is built with plain HTML, CSS, and JavaScript, so it can be opened and hosted as a static website without a framework or build process.
 
-## Contents
+## What the website includes
 
-- [Features](#features)
-- [Project structure](#project-structure)
-- [Run locally](#run-locally)
-- [Customize the site](#customize-the-site)
-- [Contact form behavior](#contact-form-behavior)
-- [Deploy to GitHub Pages](#deploy-to-github-pages)
+- **Introduction:** Name, current CSE student role, a short statement of focus, and links to the projects and contact sections.
+- **About and education:** A brief biography, degree, institution, expected graduation date, and languages.
+- **Skills:** Frontend, backend and database technologies, developer tools, and strengths such as responsive design and accessibility.
+- **Experience:** A timeline of internships and training, including organizations, dates, and summaries.
+- **Projects:** A featured StudySync exam timetable planner project, plus two editable cards reserved for future work.
+- **Contact:** Email, LinkedIn, GitHub, location, and a contact form.
 
-## Features
+## How it works
 
-- Responsive layout with mobile navigation and tablet/desktop styling.
-- Light and dark themes. The selected theme is saved in browser `localStorage`; on first visit, the site uses the system color preference.
-- Sticky navigation with current-section highlighting, smooth scrolling, and a skip-to-content link.
-- Scroll-triggered reveal effects, with reduced-motion preferences respected.
-- Portfolio sections for an introduction, about and education, skills, experience, projects, and contact.
-- Client-side contact form validation and accessible inline status messages.
+- The navigation links scroll to page sections; on smaller screens, a menu button opens and closes the navigation.
+- Visitors can switch between light and dark themes. Their choice is saved in browser `localStorage`; when no choice has been saved, the site follows the device's color preference.
+- The current section is highlighted in the navigation, and content fades into view as visitors scroll.
+- The contact form checks that a name is entered, the email has a basic valid format, and the message is at least 10 characters long. It then displays a confirmation in the page.
+- The site adapts to mobile, tablet, and desktop screens and includes keyboard focus styles, a skip-to-content link, and reduced-motion support.
+
+## Important limitations
+
+- **The contact form does not send or store messages.** Validation and the confirmation message happen only in the browser. Connect the form to a backend or form service before using it to receive inquiries.
+- The StudySync GitHub and live-demo links are currently `#` placeholders and need real project URLs.
+- The other two project cards are examples to replace when projects are ready to feature.
+- The profile image currently loads from an external image URL. Replace it with an approved, locally stored portrait if desired.
+- Google Fonts are loaded online. The site uses fallback fonts if they are unavailable.
+
+## Technology
+
+- HTML5 for page content and structure
+- CSS3 for layout, responsive styling, themes, and reveal transitions
+- Vanilla JavaScript for navigation, theme persistence, section highlighting, form validation, and the dynamic footer year
+
+There are no npm packages, build tools, or environment variables.
 
 ## Project structure
 
@@ -38,33 +53,31 @@ Built with semantic HTML, CSS, and vanilla JavaScript. There is no build step or
 └── README.md
 ```
 
-`index.html` contains the page content, `css/style.css` defines its layout and themes, and `js/script.js` handles navigation, theme preference, scroll effects, and form validation. The StudySync project card uses `assets/exam-timetable-planner.png`. The profile and StudySync SVG assets are included but are not currently used by the page.
+`index.html` contains the portfolio content, `css/style.css` contains the presentation and responsive rules, and `js/script.js` provides the interactive behavior. The featured project uses `assets/exam-timetable-planner.png`. The two SVG placeholder assets are included in the repository but are not currently used by the page.
 
 ## Run locally
 
 1. Clone or download this repository.
-2. Open `index.html` directly in a modern browser.
+2. Open `index.html` in a modern web browser.
 
-Alternatively, open the project folder in VS Code and serve it with a static server extension such as Live Server. No dependencies, build tools, or environment variables are required. Google Fonts are loaded from Google Fonts when the page is online; fallback sans-serif fonts are used if they are unavailable.
+You can also open the folder in VS Code and use a static server extension such as Live Server. A server is optional; there is no build command.
 
-## Customize the site
+## Customize
 
-- **Profile image:** In `index.html`, replace the current remote image URL in the About section with a local image path, such as `assets/profile.jpg`. Update its `alt` text to describe the image.
-- **Personal details:** Edit the introduction, biography, education, skills, experience, contact links, and page metadata in `index.html`.
-- **Projects:** Update the project cards in `index.html`, including titles, summaries, technology badges, image paths, and destination links. Two cards are currently placeholders. The StudySync GitHub and live-demo links also currently use `#` and should be replaced with real URLs.
-- **Appearance:** Adjust colors, spacing, typography, breakpoints, and motion styles in `css/style.css`.
-- **Behavior:** Navigation, theme persistence, section highlighting, reveal effects, form validation, and the footer year are handled in `js/script.js`.
+- Edit the personal information, education, skills, experience, section text, metadata, and links in `index.html`.
+- Replace the profile image URL in the About section with a local image path, and update its alternative text.
+- Replace or add project cards in `index.html`. Update each project's description, technology badges, image, GitHub URL, and demo URL.
+- Adjust colors, spacing, typography, responsive breakpoints, or motion in `css/style.css`.
+- Update interactive behavior in `js/script.js`. If connecting the form to a service, replace its current client-side-only success behavior with the actual submission flow.
 
-## Contact form behavior
+## Publish with GitHub Pages
 
-The contact form currently runs entirely in the browser. It checks that a name is provided, the email has a basic valid format, and the message contains at least 10 characters. On valid input it shows a confirmation message and resets the fields; **it does not send or store the message**. To receive submissions, connect the form to a backend or a form-handling service and update the submit handler in `js/script.js`.
+This is a static website, so it can be published directly from the repository:
 
-## Deploy to GitHub Pages
+1. Push the project to GitHub.
+2. Open the repository's **Settings → Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Choose the branch containing the site and the `/ (root)` folder, then save.
+5. Visit the URL shown in the Pages settings after deployment completes.
 
-1. Push the project files to the `main` branch of a GitHub repository.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)` folder, then save.
-5. Open the published URL shown in the Pages settings.
-
-Because this is a static site, no build command is needed. Ensure any local asset paths remain relative to `index.html` when publishing.
+Keep asset paths relative to `index.html` so they continue to work after publishing.
